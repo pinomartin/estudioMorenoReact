@@ -9,26 +9,28 @@ export const Hero = () => {
         return floatFlag ? r : Math.floor(r)
     }
 
-    const quotes = [
-                    '"Servicios basados en el estudio, conocimiento y experiencia previa."',
-                    '"Capacitados para planificar, estructurar e instrumentar los negocios planteados por nuestros clientes."',
-                    '"Acompañando todo el desarrollo con asesoramiento Fiscal, Laboral y Contable."']
-
-    const randomQuote = () => {
-            const quote = quotes[randomNumber(0,quotes.length,false)];
-            return quote
-    }
-
-    
     const [quote, setQuote] = useState('"En el año 2007, iniciamos nuestro desafío como Moreno & Asociados."')
 
     useEffect(() => {
+
+        const quotes = [
+            '"Servicios basados en el estudio, conocimiento y experiencia previa."',
+            '"Capacitados para planificar, estructurar e instrumentar los negocios planteados por nuestros clientes."',
+            '"Acompañando todo el desarrollo con asesoramiento Fiscal, Laboral y Contable."']
+    
+        const randomQuote = () => {
+            const ranquote = quotes[randomNumber(0,quotes.length,false)];
+            return ranquote
+        }
+
         const interval = setInterval(()=>{
             let randomAAA = randomQuote();
             setQuote(randomAAA)
         }, 5000)  
+
         return () => clearInterval(interval);
-      }, [randomQuote()]);
+
+      }, []);
 
   
     return (
