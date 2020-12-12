@@ -1,2 +1,3 @@
 Armado de Header y Seccion Servicios: 2.5hs
 Seccion Servicios: 3.5hs
+Seccion Hero: 3.5hs
